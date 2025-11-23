@@ -1,0 +1,16 @@
+#include <math.h>
+#include <stdio.h>
+int main() {
+    int n, temp, digit, sum = 0, count = 0;
+    scanf("%d", &n);
+    temp = n;
+    while(temp){ count++; temp /= 10; }
+    temp = n;
+    while(temp){
+        digit = temp % 10;
+        sum += pow(digit, count);
+        temp /= 10;
+    }
+    printf(sum == n ? "Armstrong" : "Not Armstrong");
+    return 0;
+}
