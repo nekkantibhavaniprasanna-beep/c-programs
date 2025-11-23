@@ -1,0 +1,10 @@
+#include <stdio.h>
+int main() {
+    int n, i, flag = 0;
+    scanf("%d", &n);
+    for(i = 2; i * i <= n; i++)
+        if(n % i == 0) flag = 1;
+    if(n < 2) flag = 1;
+    printf(flag ? "Not Prime" : "Prime");
+    return 0;
+}
